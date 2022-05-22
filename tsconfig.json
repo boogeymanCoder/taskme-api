@@ -19,6 +19,11 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/api/admin/post.tss"
+  ],
   "exclude": ["node_modules"]
 }

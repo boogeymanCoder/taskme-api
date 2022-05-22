@@ -6,6 +6,15 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 const prisma = new PrismaClient();
 
 export default NextAuth({
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user = user;
+
+      // console.log({ session, token, user });
+
+      return session;
+    },
+  },
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
